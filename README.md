@@ -13,6 +13,16 @@ To complete a lap around the simulator track using a PID controller. No tire may
  - Changing D did not seem to have much effect. This prevents the vehicle from crossing the center line. Good value for money was used and otherwise the car slightly deviated from the track over the middle.
 
 
+ <p align="center">
+<img src=".//pid.gif">
+</p> 
+
+
+
+Hyperparameters were obtained through manual tuning and many experiments. I started by choosing a P-value and a random D-value. Choosing a high P value seems to work fine when vehicle speed is still low. The car starts accelerating when its speed reaches 30 mph. After a few experiments I discovered that a small P-value helps stabilize the car when its speed is above 50 km/h. I played around with a few D values to compensate for the excess/oscillations. With a D value of 1.0 (i.e. the D/I ratio is 10) the car doesn't vibrate too much or too often.
+
+
+
 
 ## Dependencies
 
