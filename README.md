@@ -3,6 +3,17 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
+## Implementation
+To complete a lap around the simulator track using a PID controller. No tire may leave the drivable portion of the track surface. 
+ - Like the lecture, get the error in 500 updates, and adjust twittle
+ - Tune each parameter separately: P first, D second, I third
+ - When we tune each parameter, initialize each delta parameter to 0.0001 For example, when I tune P, delta array is {0.0001, 0, 0}
+ - Changing P lead to a very noticable change to the track followed by car. This enables the car to be steered from the center of the road in a direction proportional and opposite to the vehicle position. It causes the car to return to the center. If this value was large, the car could easily go off the track.
+ - Changing I made car go off track always. A very small value is good for this project
+ - Changing D did not seem to have much effect. This prevents the vehicle from crossing the center line. Good value for money was used and otherwise the car slightly deviated from the track over the middle.
+
+
+
 ## Dependencies
 
 * cmake >= 3.5
